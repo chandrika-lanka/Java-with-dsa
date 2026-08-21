@@ -1,0 +1,164 @@
+//Write a program to print whether a number is even or odd, also take input from the user.
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int num = sc.nextInt();
+        if (num %2 == 0){
+            System.out.println("The Number is Even");
+        }else {
+            System.out.println(" The Number is Odd");
+            sc.close();
+        }
+    }
+}
+/* 2
+The Number is Even */
+
+//Take a name as input and print a greeting message for that name.import java.util.Scanner;
+public class Main{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the the Name: ");
+        String name = sc.nextLine();
+        System.out.println("Good Morning " + name);
+    }
+}
+/* Output : 
+Enter the the Name: 
+John
+Good Morning John */
+
+//Write a program to input principal, time, and rate (P, T, R) from the user and find Simple Interest.
+import java.util.Scanner;
+public class Main{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter Principal: ");
+        long Principal = sc.nextLong();
+        System.out.println("Enter the Time : ");
+        long Time = sc.nextLong();
+        System.out.println("Enter the Rate of Interest: ");
+        long rot = sc.nextLong();
+        
+        // int Hr = 0;
+        // int re = 0;
+        // if {
+        //     Hours = Time / 60;
+        //     hr += Hours;
+            
+        //     remaining = Time % 60;
+        //     re += remaining;
+        // }
+        long SimpleInterest = ((Principal*Time*rot) / 100);
+        System.out.println("The Simple Interest: " + SimpleInterest);
+        
+    }
+}
+/* Output: 
+Enter Principal: 
+1000
+Enter the Time : 
+2
+Enter the Rate of Interest: 
+5
+The Simple Interest: 100 */
+
+//Take in two numbers and an operator (+, -, *, /) and calculate the value. (Use if conditions)
+import java.util.Scanner;
+public class Main{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        System.out.println(" Enter the first number: ");
+        int num1 = sc.nextInt();
+        System.out.println(" Enter the second number: ");
+        int num2 = sc.nextInt();
+        System.out.println("Enter the Operator: ");
+        char Operator = sc.next().charAt(0);
+        if (Operator == '+') {
+            //Plus = num1 + num2;
+            System.out.println(" The sum is: " + (num1+num2));
+        } else if (Operator == '-') {
+            //Minus = num1 - num2;
+            System.out.println("The subtraction is : " + (num1-num2));
+        } else if ( Operator == '/') {
+            //Divi = num1 / num2;
+            System.out.println("The Division is : " + (num1/num2));
+            
+        } else if (Operator == '*' ) {
+            //Mult = num1 * num2;
+            System.out.println("The Multiplication is: " + (num1*num2));
+        }
+    }
+}
+/* Output: 
+Enter the first number: 
+10
+Enter the second number: 
+5
+Enter the Operator: +
+ The sum is: 15 */
+
+//Take 2 numbers as input and print the largest number.
+import java.util.Scanner;
+public class Main{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the First Number: ");
+        int num1 = sc.nextInt();
+        System.out.println("Enter the Second Number: ");
+        int num2 = sc.nextInt();
+        
+        int Largest = Math.max(num1, num2);
+        System.out.println(" The Largest number is: " + Largest);
+    }
+}
+/* Output: 
+Enter the First Number: 
+10
+Enter the Second Number: 
+5
+ The Largest number is: 10*/
+
+// input currency in rupees and output in USD
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+       Scanner sc = new Scanner(System.in);
+       System.out.println("Enter Currency in rupees: ");
+       double rupees = sc.nextInt();
+       
+       double USD = (rupees * 95.68);
+       System.out.println("The Currency in USD: " + USD);
+       sc.close();
+    }
+} 
+/* Output:
+Enter Currency in rupees: 
+100
+The Currency in USD: 9568.0*/
+
+// To calculate Fibonacci Series up to n numbers.
+import java.util.*;
+public class Main{
+     static void fib(int a , int b, int num){
+         if (num == 0){
+             return;
+         }
+         
+         System.out.print(a);
+         fib(b, a+b, num-1);
+         
+     }
+     
+     public static void main(String[] args){
+         Scanner sc = new Scanner(System.in);
+         System.out.println("Enter the no.of Terms: ");
+         int num = sc.nextInt();
+         fib(0, 1, num);
+     }
+} 
+/* Output:
+Enter the no.of Terms: 
+5
+011235*/

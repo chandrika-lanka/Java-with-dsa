@@ -1,0 +1,266 @@
+//Input a year and find whether it is a leap year or not.
+import java.util.Scanner;
+
+public class CheckLeapYear {
+    public CheckLeapYear(){
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a year: ");
+        int year = sc.nextInt();
+        sc.close();
+
+        boolean isLeap = (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0);
+        System.out.println(isLeap);
+    }
+}
+/* Enter a year: 2024
+true */
+
+//Take two numbers and print the sum of both.
+import java.util.Scanner;
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter x: ");
+        System.out.println("Enter Y: ");
+        int x = sc.nextInt();
+        int y = sc.nextInt();
+        int sum = x + y;
+        System.out.println("The Sum of two numbers is: " + sum);
+        sc.close();
+        
+    }
+}   
+// /* Enter x:1 
+// Enter y:2
+// The Sum of two numbers is: 3 */
+
+//Take a number as input and print the multiplication table for it.
+import java.util.Scanner;
+public class Main{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter a num: ");
+        int num = sc.nextInt();
+        System.out.println(num + "x 1 = " + (num*1));
+        System.out.println(num + "x 2 = " + (num*2));
+        System.out.println(num + "x 3 = " + (num*3));
+        System.out.println(num + "x 4 = " + (num*4));
+        System.out.println(num + "x 5 = " + (num*5));
+        System.out.println(num + "x 6 = " + (num*6));
+        System.out.println(num + "x 7 = " + (num*7));
+        System.out.println(num + "x 8 = " + (num*8));
+        System.out.println(num + "x 9 = " + (num*9));
+        System.out.println(num + "x 10 = " + (num*10));
+        sc.close();
+    }
+}
+/* Enter a num: 
+5
+5x 1 = 5
+5x 2 = 10
+5x 3 = 15
+5x 4 = 20
+5x 5 = 25
+5x 6 = 30
+5x 7 = 35
+5x 8 = 40
+5x 9 = 45
+5x 10 = 50 */
+
+//Take 2 numbers as inputs and find their HCF and LCM.
+import java.util.Scanner;
+import java.math.BigInteger;
+public class HCFLCM{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        
+        System.out.println("Enter a: ");
+        int a = sc.nextInt();
+        
+        System.out.println("Enter b: ");
+        int b = sc.nextInt();
+        
+        BigInteger x = BigInteger.valueOf(a);
+        BigInteger y = BigInteger.valueOf(b);
+         
+        int hcf = x.gcd(y).intValue();
+        
+        int lcm = (a * b) / hcf;
+        
+        System.out.println(" Lcm: " + lcm );
+        System.out.println("Hcf : " + hcf);
+    }
+}
+/* Enter a: 12
+Enter b: 18
+ Lcm: 36
+Hcf : 6  */
+
+//Keep taking numbers as inputs till the user enters ‘x’, after that print sum of all.
+import java.util.Scanner;
+import java.util.InputMismatchException;
+public class Main{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        System.out.println(" Enter a Num: ");
+        
+        int sum = getSum(sc);
+        System.out.println(sum);
+        sc.close();
+    }
+    public static int getSum(Scanner sc){
+        int num = sc.nextInt();
+        return num + getSum(sc);
+    } catch (InputMismatchException e) {
+        return 0;
+        
+    }
+}
+/* Enter a Num: 5
+ Enter a Num: 10
+ Enter a Num: x
+15 */
+// Take input from user and calculate the hypotneus of the right angled Triangle
+
+import java.util.*;
+import java.util.Scanner;
+class main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the base of the triangle: ");
+        double base = sc.nextDouble();
+        System.out.println("Enter the height of the triangle: ");
+        double height = sc.nextDouble();
+        double hypotenuse = Math.sqrt(Math.pow(base, 2) + Math.pow(height, 2));
+        System.out.println("The hypotenuse of the triangle is: " + hypotenuse);
+        sc.close();
+    }
+}
+
+// Take input from user and check whether it is Postive or Negative
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter a Number: ");
+        int a = sc.nextInt();
+        boolean Positive = (a>0) ? true : false;
+        System.out.println("The number is Positive" + " - " + Positive);
+        //boolean Negative  = (a<0) ? true : false;
+        //System.out.println("The number is Negative" + " - " + Negative);
+    }
+}
+
+// Take input from user and check whether it is Even or Odd
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter a Number: ");
+        int a = sc.nextInt();
+        boolean Even = (a%2 == 0) ? true : false;
+        System.out.println("The number is Even" + " - " + Even);
+    }
+}
+
+//Generate a random number and check whether it is Even or Odd
+import java.util.*;
+
+public class Main{
+    public static void main(String[] args){
+        Random random = new Random();
+        int x = random.nextInt(100) + 1;
+        System.out.println(x);
+        boolean Even = (x%2 == 0) ? true : false;
+        System.out.println("The number is Even - " + Even);
+    }
+}
+
+// Generate a random number (OTP) with 5 numbers and print it.
+import java.util.*;
+
+public class Main{
+    public static void main(String[] args){
+        Random random = new Random();
+        int x = random.nextInt(999) + 1;
+        System.out.printf("%05d", x);
+        // boolean Even = (x%2 == 0) ? true : false;
+        // System.out.println("The number is Even - " + Even);
+    }
+}
+
+// Convert the datatypes from one datatype to another(Type Casting)
+import java.util.*;
+
+public class Main{
+    public static void main(String[] args){
+        int x = 10;
+        double y = x;
+        System.out.println(x);
+        System.out.println(y);
+        
+        double z = 11;
+        int num = (int) z;
+        System.out.println(z);
+        System.out.println(num);
+        
+        int a = 12;
+        float b = a;
+        System.out.println(a);
+        System.out.println(b);
+        
+        float f = 13.0f;
+        int i =  (int) f;
+        System.out.println(f);
+        System.out.println(i);
+        
+        double v = 14.0;
+        float n = (float) v;
+        System.out.println(v);
+        System.out.println(n);
+        
+        float m = 17.0f;
+        double k = m;
+        System.out.println(m);
+        System.out.println(k);
+        
+    }
+}
+/* 10
+10.0
+11.0
+11
+12
+12.0
+13.0
+13
+14.0
+14.0
+17.0
+17.0
+
+=== Code Execution Successful === */
+
+// if-else lse  condition 
+import java.util.*;
+
+public class Main{
+    public static void main(String[] args){
+    Scanner sc = new Scanner(System.in);
+    int Score = sc.nextInt();
+    if (Score > 90) {
+        System.out.println("Grade is A");
+    }else if (Score > 80 && Score < 90){
+        System.out.println("Grade is B");
+    }else if (Score > 70 && Score < 80){
+        System.out.println("Grade is C");
+    }else if (Score > 60 && Score < 70){
+        System.out.println("Grade is D");
+    }else {
+        System.out.println("You are Failed");
+    }
+    }
+}
+
